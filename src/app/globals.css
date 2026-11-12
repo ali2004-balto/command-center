@@ -1,0 +1,8 @@
+/* Global styles: plain CSS, conservative features only (the TV browser may be old). */
+html, body { margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f5f7; color: #1b1f24; line-height: 1.4; }
+a { color: #0b57d0; }
+.ribbon { background: #b45309; color: #fff; text-align: center; font-weight: 700; letter-spacing: 0.1em; padding: 4px 8px; font-size: 13px; }
+.preview-banner { background: #7c3aed; color: #fff; text-align: center; font-weight: 700; padding: 6px 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; border-bottom: 1px solid #eceff3; padding: 4px 6px; vertical-align: top; }
