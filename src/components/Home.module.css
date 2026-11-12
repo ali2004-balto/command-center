@@ -1,0 +1,23 @@
+/* Owner pages: a single responsive column that works on a phone. */
+.wrap { max-width: 720px; margin: 0 auto; padding: 16px; }
+.nav { margin: 0 0 12px 0; font-size: 15px; }
+.nav a { margin-right: 14px; }
+.card { background: #fff; border: 1px solid #d9dde3; border-radius: 10px; padding: 12px 14px; margin: 0 0 12px 0; }
+.card h2 { font-size: 18px; margin: 0 0 8px 0; }
+.notice { background: #fee2e2; color: #7f1d1d; padding: 6px 10px; border-radius: 6px; font-weight: 600; margin: 0 0 8px 0; }
+.ok { background: #dcfce7; color: #14532d; padding: 4px 10px; border-radius: 999px; display: inline-block; font-size: 14px; }
+.muted { color: #5b6470; }
+.item { border-top: 1px solid #eceff3; padding: 8px 0; }
+.item summary { cursor: pointer; font-weight: 600; }
+.btn { background: #0b57d0; color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-size: 15px; cursor: pointer; margin-right: 8px; margin-top: 6px; }
+.btn.danger { background: #b91c1c; }
+.btn.plain { background: #e5e7eb; color: #111; }
+.chip { display: inline-block; border-radius: 999px; padding: 2px 12px; margin: 0 8px 6px 0; font-size: 14px; color: #fff; }
+.red { background: #b91c1c; }
+.amber { background: #b45309; }
+.green { background: #166534; }
+.counters { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 8px; }
+.counter { background: #f4f5f7; border-radius: 8px; padding: 8px; text-align: center; }
+.counter b { font-size: 24px; display: block; }
+.err { background: #fee2e2; color: #7f1d1d; padding: 8px 12px; border-radius: 6px; margin: 0 0 12px 0; }
+.pre { white-space: pre-wrap; background: #f4f5f7; padding: 8px; border-radius: 6px; }
