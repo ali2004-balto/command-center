@@ -1,14 +1,14 @@
 /* TV board, "Numbers first" layout. Fixed for 1920x1080, dark, read from across the room.
    Plain CSS only (the TV browser may be old). Colours come from the Command Center TV design system, night theme. */
-.board { background: #0a0f1c; color: #f4f7fb; width: 100%; height: 1080px; padding: 32px 40px; box-sizing: border-box; overflow: hidden; font-size: 30px; line-height: 1.3; }
+.board { background: #0a0f1c; color: #f4f7fb; width: 100%; min-height: 1080px; padding: 32px 40px; box-sizing: border-box; font-size: 30px; line-height: 1.3; }
 .header { display: flex; justify-content: space-between; align-items: flex-start; height: 128px; }
 .greeting { font-size: 76px; line-height: 80px; font-weight: 700; margin: 0; }
 .sub { font-size: 38px; line-height: 46px; color: #aab6cc; font-weight: 500; margin: 0; }
 .pill { display: inline-block; padding: 8px 28px; border-radius: 999px; background: #166534; color: #fff; font-size: 30px; font-weight: 700; white-space: nowrap; }
 .stale { background: #c62828; }
 
-.top { display: flex; height: 540px; margin-top: 4px; }
-.bottom { display: flex; height: 308px; margin-top: 24px; }
+.top { display: flex; min-height: 540px; margin-top: 4px; }
+.bottom { display: flex; min-height: 308px; margin-top: 24px; }
 .panel { background: #121a2c; border-radius: 20px; padding: 24px 28px; box-sizing: border-box; overflow: hidden; }
 .panel h2 { font-size: 34px; line-height: 40px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #8ec5ff; margin: 0 0 16px 0; }
 .muted { color: #aab6cc; }
@@ -53,12 +53,9 @@
 .amber { background: #b45309; }
 .green { background: #166534; }
 
-/* Stale state: one big banner replaces every number and panel. */
-.staleWrap { display: flex; margin-top: 12px; height: 880px; }
-.staleAge { width: 760px; margin-right: 24px; background: #121a2c; border-radius: 20px; text-align: center; padding-top: 250px; box-sizing: border-box; }
-.staleAgeBig { font-size: 120px; line-height: 130px; font-weight: 800; color: #ff8a8a; }
-.staleAgeSub { font-size: 36px; line-height: 44px; font-weight: 600; color: #aab6cc; margin-top: 16px; padding: 0 40px; }
-.staleBanner { flex: 1; background: #c62828; color: #fff; border-radius: 20px; padding: 150px 56px 0 56px; box-sizing: border-box; }
-.staleTitle { font-size: 140px; line-height: 140px; font-weight: 800; }
-.staleMsg { font-size: 48px; line-height: 60px; font-weight: 700; margin-top: 40px; }
-.staleHint { font-size: 38px; line-height: 48px; font-weight: 500; margin-top: 32px; }
+/* Stale data: a big red banner replaces the numbers (turnover metrics) or the whole board (bridge down). */
+.staleBanner { background: #c62828; color: #fff; border-radius: 14px; padding: 24px 40px; height: 100%; box-sizing: border-box; }
+.staleTitle { font-size: 100px; line-height: 104px; font-weight: 800; }
+.staleMsg { font-size: 40px; line-height: 50px; font-weight: 700; margin-top: 12px; }
+.staleSmall { margin: 0; font-size: 30px; line-height: 38px; font-weight: 700; color: #ff8a8a; }
+.full { background: #c62828; color: #fff; border-radius: 20px; margin-top: 200px; padding: 160px 80px; text-align: center; font-size: 72px; line-height: 84px; font-weight: 800; }
