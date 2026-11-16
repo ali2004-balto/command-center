@@ -1,61 +1,63 @@
 /* TV board, "Numbers first" layout. Fixed for 1920x1080, dark, read from across the room.
    Plain CSS only (the TV browser may be old). Colours come from the Command Center TV design system, night theme. */
-.board { background: #0a0f1c; color: #f4f7fb; width: 100%; min-height: 1080px; padding: 32px 40px; box-sizing: border-box; font-size: 30px; line-height: 1.3; }
-.header { display: flex; justify-content: space-between; align-items: flex-start; height: 128px; }
-.greeting { font-size: 76px; line-height: 80px; font-weight: 700; margin: 0; }
-.sub { font-size: 38px; line-height: 46px; color: #aab6cc; font-weight: 500; margin: 0; }
+.board { background: #0a0f1c; color: #f4f7fb; width: 100%; min-height: 1080px; min-height: max(1080px, 100vh); padding: 32px 40px; box-sizing: border-box; font-size: 30px; line-height: 1.3; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; height: 96px; }
+.greeting { font-size: 56px; line-height: 60px; font-weight: 700; margin: 0; }
+.sub { font-size: 30px; line-height: 36px; color: #aab6cc; font-weight: 500; margin: 0; }
 .pill { display: inline-block; padding: 8px 28px; border-radius: 999px; background: #166534; color: #fff; font-size: 30px; font-weight: 700; white-space: nowrap; }
 .stale { background: #c62828; }
 
-.top { display: flex; min-height: 540px; margin-top: 4px; }
-.bottom { display: flex; min-height: 308px; margin-top: 24px; }
-.panel { background: #121a2c; border-radius: 20px; padding: 24px 28px; box-sizing: border-box; overflow: hidden; }
+.top { display: flex; height: 608px; margin-top: 4px; }
+.bottom { display: flex; height: 288px; margin-top: 20px; }
+.panel { background: #121a2c; border-radius: 20px; padding: 24px 28px; box-sizing: border-box; overflow: hidden; position: relative; }
+.clamp1 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .panel h2 { font-size: 34px; line-height: 40px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #8ec5ff; margin: 0 0 16px 0; }
 .muted { color: #aab6cc; }
 .notice { background: #c62828; color: #fff; border-radius: 14px; padding: 8px 16px; margin: 0 0 12px 0; font-size: 28px; font-weight: 700; }
 
-.rail { width: 500px; margin-right: 24px; }
-.hero { height: 216px; margin-bottom: 16px; }
-.heroNum { float: left; font-size: 168px; line-height: 176px; font-weight: 800; color: #ffb84d; margin-right: 24px; }
-.heroLabel { font-size: 34px; line-height: 40px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #8ec5ff; padding-top: 36px; }
-.alerts { height: 140px; margin-bottom: 16px; }
+.rail { width: 500px; margin-right: 24px; display: flex; flex-direction: column; }
+.hero { padding-top: 12px; padding-bottom: 12px; height: 150px; margin-bottom: 16px; flex: none; }
+.heroNum { float: left; font-size: 120px; line-height: 124px; font-weight: 800; color: #ffb84d; margin-right: 24px; }
+.heroLabel { font-size: 34px; line-height: 40px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #8ec5ff; padding-top: 24px; }
+.alerts { padding-top: 10px; padding-bottom: 10px; height: 100px; margin-bottom: 16px; flex: none; }
 .alert { display: inline-block; font-size: 40px; line-height: 48px; font-weight: 800; margin-right: 32px; color: #f4f7fb; }
 .alertHot { color: #ff8a8a; }
 .alertLabel { display: block; font-size: 26px; line-height: 32px; font-weight: 600; color: #aab6cc; }
-.dates { height: 152px; margin-bottom: 0; }
+.dates { flex: 1; min-height: 0; }
 .dates h2 { margin-bottom: 8px; }
 
 .needs { flex: 1; margin-right: 24px; }
-.needRow { display: flex; align-items: center; background: #1b2640; border-radius: 14px; padding: 0 20px 0 12px; margin-bottom: 8px; min-height: 62px; font-size: 34px; line-height: 40px; font-weight: 600; }
+.needRow { display: flex; align-items: center; background: #1b2640; border-radius: 14px; padding: 0 20px 0 12px; margin-bottom: 6px; padding-top: 6px; padding-bottom: 6px; font-size: 28px; line-height: 32px; font-weight: 600; }
 .rank { flex: none; width: 44px; height: 44px; border-radius: 22px; background: #b45309; color: #fff; text-align: center; font-size: 28px; line-height: 44px; font-weight: 800; margin-right: 18px; }
-.more { color: #aab6cc; margin: 4px 0 0 0; }
+.more { position: absolute; right: 28px; top: 24px; color: #aab6cc; margin: 0; font-size: 28px; line-height: 40px; }
 
 .done { width: 500px; }
-.headline { font-size: 30px; line-height: 38px; margin: 0 0 12px 0; }
-.line { margin: 0 0 12px 0; font-size: 28px; line-height: 34px; color: #aab6cc; }
+.headline { font-size: 30px; line-height: 36px; margin: 0 0 12px 0; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.line { margin: 0 0 10px 0; font-size: 28px; line-height: 34px; color: #aab6cc; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .stages { flex: 1; margin-right: 24px; position: relative; }
-.bars { display: flex; align-items: flex-end; height: 150px; margin-top: 8px; }
-.bar { flex: 1; text-align: center; margin-right: 16px; }
+.bars { display: flex; align-items: flex-end; height: 150px; margin-top: 0; }
+.bar { flex: 1; min-width: 0; text-align: center; margin-right: 12px; }
 .bar:last-child { margin-right: 0; }
 .barNum { display: block; font-size: 48px; line-height: 52px; font-weight: 800; }
 .barFill { display: block; background: #2563c7; border-radius: 8px 8px 0 0; }
-.barLabel { display: block; font-size: 26px; line-height: 30px; font-weight: 600; color: #aab6cc; margin-top: 8px; }
+.barLabel { display: block; font-size: 26px; line-height: 30px; font-weight: 600; color: #aab6cc; margin-top: 6px; overflow: hidden; height: 60px; }
 .asOf { position: absolute; right: 28px; top: 20px; }
 .asOf .pill { font-size: 26px; padding: 4px 20px; }
 
-.today { width: 650px; }
-.event { margin: 0 0 10px 0; font-size: 30px; line-height: 36px; font-weight: 600; }
-.time { display: inline-block; width: 160px; color: #8ec5ff; font-weight: 800; font-size: 28px; }
+.today { width: 720px; }
+.event { margin: 0 0 4px 0; font-size: 26px; line-height: 30px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.time { display: inline-block; width: 150px; color: #8ec5ff; font-weight: 800; font-size: 26px; }
 
-.chip { display: inline-block; border-radius: 999px; padding: 4px 18px; margin: 0 10px 8px 0; font-size: 26px; font-weight: 700; color: #fff; }
+.chip { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; border-radius: 14px; padding: 2px 16px; margin: 0 0 6px 0; font-size: 26px; line-height: 30px; font-weight: 700; color: #fff; }
 .red { background: #c62828; }
 .amber { background: #b45309; }
 .green { background: #166534; }
 
 /* Stale data: a big red banner replaces the numbers (turnover metrics) or the whole board (bridge down). */
 .staleBanner { background: #c62828; color: #fff; border-radius: 14px; padding: 24px 40px; height: 100%; box-sizing: border-box; }
-.staleTitle { font-size: 100px; line-height: 104px; font-weight: 800; }
-.staleMsg { font-size: 40px; line-height: 50px; font-weight: 700; margin-top: 12px; }
+.staleTitle { font-size: 84px; line-height: 88px; font-weight: 800; }
+.staleMsg { font-size: 34px; line-height: 42px; font-weight: 700; margin-top: 12px; }
 .staleSmall { margin: 0; font-size: 30px; line-height: 38px; font-weight: 700; color: #ff8a8a; }
 .full { background: #c62828; color: #fff; border-radius: 20px; margin-top: 200px; padding: 160px 80px; text-align: center; font-size: 72px; line-height: 84px; font-weight: 800; }

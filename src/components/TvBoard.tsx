@@ -45,6 +45,7 @@ export default function TvBoard({ v }: { v: TvView }) {
             )}
           </section>
           <section className={`${s.panel} ${s.dates}`}>
+            <h2>Coming up</h2>
             {v.chips.length === 0 && <span className={s.muted}>{v.chipsMessage}</span>}
             {v.chipsMessage && v.chips.length > 0 && <p className={s.notice}>{v.chipsMessage}</p>}
             {v.chips.map((c, i) => (
@@ -56,13 +57,13 @@ export default function TvBoard({ v }: { v: TvView }) {
         </div>
 
         <section className={`${s.panel} ${s.needs}`}>
-          <h2>Needs you · most urgent first</h2>
+          <h2>Needs you</h2>
           {v.needsNotice && <p className={s.notice}>{v.needsNotice}</p>}
           {v.needs.length === 0 && <p className={s.muted}>Nothing needs you right now</p>}
           {v.needs.map((n, i) => (
             <div className={s.needRow} key={i}>
               <span className={s.rank}>{i + 1}</span>
-              {n.title}
+              <span className={s.clamp2}>{n.title}</span>
             </div>
           ))}
           {v.needsMore > 0 && <p className={s.more}>+{v.needsMore} more on your phone</p>}
@@ -95,7 +96,7 @@ export default function TvBoard({ v }: { v: TvView }) {
                 {v.stages.map((st) => (
                   <div className={s.bar} key={st.label}>
                     <span className={s.barNum}>{st.count}</span>
-                    <span className={s.barFill} style={{ height: Math.round((st.count / maxCount) * 96) }} />
+                    <span className={s.barFill} style={{ height: Math.round((st.count / maxCount) * 36) }} />
                     <span className={s.barLabel}>{st.label}</span>
                   </div>
                 ))}
