@@ -96,7 +96,7 @@ export default function TvBoard({ v }: { v: TvView }) {
                 {v.stages.map((st) => (
                   <div className={s.bar} key={st.label}>
                     <span className={s.barNum}>{st.count}</span>
-                    <span className={s.barFill} style={{ height: Math.round((st.count / maxCount) * 36) }} />
+                    <span className={s.barFill} style={{ height: `calc(${Math.round((st.count / maxCount) * 36)} * var(--u))` }} />
                     <span className={s.barLabel}>{st.label}</span>
                   </div>
                 ))}
